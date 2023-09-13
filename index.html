@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <title>Mnemonic Account Generator</title>
+    <style>
+html, body {
+  font-family: monospace;
+}
+
+a:visited, a  { color: grey; }
+a:active, a:hover { color: black; }
+
+.accounts {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.accounts > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+}
+
+    </style>
+    <script src="./bundle.js"></script>
+  </head>
+
+  <body>
+
+    <section class="mnemonic-input">
+
+      <h1>Mnemonic (Secret Recovery Phrase) Account Generator</h1>
+      <h3>Generate Ethereum Addresses From Mnemonic (Secret Recovery Phrase) </h3>
+
+      <p>
+        For greatest security, only use on a computer you fully trust.
+      </p>
+      <p>
+        Ideally, use on a computer that is not connected to the internet, and never will be.
+      </p>
+
+      <textarea
+             class="mnemonic"
+             placeholder="Enter your mnemonic (Secret Recovery Phrase) here"
+             style="width:400px;height:100px;"></textarea>
+      <br>
+
+      <span>
+        Number of accounts to generate (can be slow!)
+      </span>
+      <input class="accountCount" type="number" min=1 value=10></input>
+      <br>
+
+      <input type="checkbox" name="Display private keys (do not check with untrusted people viewing your screen)" id="displayKeys"></input><span>Display private keys (do not check with untrusted people viewing your screen)</span>
+      <br>
+
+      <button class="generate">
+        Generate Accounts
+      </button>
+
+    </section>
+
+    <section class="results" style="display:none;">
+      <h1>Your Ethereum Accounts</h1>
+
+      <ol class="accounts">
+      </ol>
+
+      <button class="reset">
+        Reset
+      </button>
+
+    </section>
+
+    <footer>
+      <a href="https://github.com/flyswatter/mnemonic-account-generator">
+        View on GitHub
+      </a>
+    </footer>
+
+  </body>
+
+</html>
